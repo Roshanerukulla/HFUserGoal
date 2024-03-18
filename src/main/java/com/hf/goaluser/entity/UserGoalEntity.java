@@ -6,51 +6,64 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
-@Entity
-	public class UserGoalEntity{
-	
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name="ug_id")
-	private Long ug_id;
-	
-	@Column(name="user_id")
-	private Long user_id;
-	
-	
-	GoalDTO goal1;
-	public Long getUg_id() {
-		return ug_id;
+@Entity(name = "usergoals")
+public class UserGoalEntity{
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long mappingId;
+
+    private Long userId;
+
+    private Long goalId1;
+
+    private Long goalId2;
+
+    private Long goalId3;
+
+	public Long getMappingId() {
+		return mappingId;
 	}
-	public void setUg_id(Long ug_id) {
-		this.ug_id = ug_id;
+
+	public void setMappingId(Long mappingId) {
+		this.mappingId = mappingId;
 	}
-	public Long getUser_id() {
-		return user_id;
+
+	public Long getUserId() {
+		return userId;
 	}
-	public void setUser_id(Long user_id) {
-		this.user_id = user_id;
+
+	public void setUserId(Long userId) {
+		this.userId = userId;
 	}
-	public GoalDTO getGoal1() {
-		return goal1;
+
+	public Long getGoalId1() {
+		return goalId1;
 	}
-	public void setGoal1(GoalDTO goal1) {
-		this.goal1 = goal1;
+
+	public void setGoalId1(Long goalId1) {
+		this.goalId1 = goalId1;
 	}
-	public GoalDTO getGoal2() {
-		return goal2;
+
+	public Long getGoalId2() {
+		return goalId2;
 	}
-	public void setGoal2(GoalDTO goal2) {
-		this.goal2 = goal2;
+
+	public void setGoalId2(Long goalId2) {
+		this.goalId2 = goalId2;
 	}
-	public GoalDTO getGoal3() {
-		return goal3;
+
+	public Long getGoalId3() {
+		return goalId3;
 	}
-	public void setGoal3(GoalDTO goal3) {
-		this.goal3 = goal3;
+
+	public void setGoalId3(Long goalId3) {
+		this.goalId3 = goalId3;
 	}
-	GoalDTO goal2;
-	GoalDTO goal3;
-	
-		
+
+	public UserGoalEntity() {
+		super();
+		// TODO Auto-generated constructor stub
 	}
+
+    // getters, setters
+}

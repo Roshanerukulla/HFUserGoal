@@ -6,10 +6,11 @@ import org.springframework.stereotype.Repository;
 import com.hf.goaluser.entity.UserGoalEntity;
 
 import java.util.List;
+import java.util.Optional;
 
 @Repository
 public interface UserGoalRepository extends JpaRepository<UserGoalEntity, Long> {
 
-    UserGoalEntity findByUserId(Long userId);
+    Optional<UserGoalEntity> findByUserId(Long userId);
 }
 
